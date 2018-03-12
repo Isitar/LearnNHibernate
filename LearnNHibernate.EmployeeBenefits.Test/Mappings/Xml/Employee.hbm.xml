@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Domain" namespace="Domain">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="LearnNHibernate.EmployeeBenefits.Domain" namespace="LearnNHibernate.EmployeeBenefits.Domain">
   <class name="Employee">
     <id name="Id" generator="hilo" />
     <property name="EmployeeNumber" />
@@ -10,5 +10,10 @@
     <property name="DateOfJoining" />
     <property name="IsAdmin" />
     <property name="Password" />
+    <set name="Benefits" cascade="all-delete-orphan">
+      <key column="Employee_Id" />
+      <one-to-many class="Benefit"/>
+    </set>
+    <one-to-one name = "ResidentialAddress" class = "Address" property-ref= "Employee" cascade = "all" />
   </class>
 </hibernate-mapping>

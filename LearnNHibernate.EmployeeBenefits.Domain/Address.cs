@@ -13,5 +13,6 @@ namespace LearnNHibernate.EmployeeBenefits.Domain
         public virtual string Postcode { get; set; }
         public virtual string City { get; set; }
         public virtual string Country { get; set; }
+        public virtual Employee Employee { get; set; }
     }
 }

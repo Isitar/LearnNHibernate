@@ -18,5 +18,6 @@ namespace LearnNHibernate.EmployeeBenefits.Domain
         public virtual bool IsAdmin { get; set; }
         public virtual string Password { get; set; }
         public virtual ICollection<Benefit> Benefits { get; set; }
+        public virtual ICollection<Community> Communities { get; set; }
     }
 }

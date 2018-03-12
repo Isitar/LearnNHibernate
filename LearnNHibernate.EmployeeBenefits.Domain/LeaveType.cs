@@ -10,6 +10,7 @@ namespace LearnNHibernate.EmployeeBenefits.Domain
     {
         Casual,
         Sick,
-        Unpaid
+        Unpaid,
+        Paid
     }
 }
